@@ -3121,8 +3121,36 @@ input, select, textarea {
 				#header.alt .logo img {
 					display: block;
 					margin: 0 auto;
-					max-width: 75%;
+							max-width: 75%;
 				}
+
+						/* Profile image: make it circular and constrained */
+						#header.alt .logo img.profile,
+						#header .logo img.profile {
+							display: block;
+							margin: 0 auto;
+							width: 110px;
+							height: 110px;
+							object-fit: cover;
+							border-radius: 50%;
+							box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+						}
+
+						@media screen and (max-width: 980px) {
+							#header.alt .logo img.profile,
+							#header .logo img.profile {
+								width: 90px;
+								height: 90px;
+							}
+						}
+
+						@media screen and (max-width: 736px) {
+							#header.alt .logo img.profile,
+							#header .logo img.profile {
+								width: 70px;
+								height: 70px;
+							}
+						}
 
 		@media screen and (max-width: 1280px) {
 
